@@ -8,6 +8,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
@@ -43,14 +44,15 @@ class Ui_Dialog(object):
         self.pushButtonGo.setText(_translate("Dialog", "Go"))
         self.label.setText(_translate("Dialog", "Enter URL"))
 
+
 from PyQt5.QtWebEngineWidgets import QWebEngineView
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     Dialog = QtWidgets.QDialog()
     ui = Ui_Dialog()
     ui.setupUi(Dialog)
     Dialog.show()
     sys.exit(app.exec_())
-

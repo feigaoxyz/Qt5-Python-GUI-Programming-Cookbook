@@ -4,6 +4,7 @@ from PyQt5.QtWidgets import QDialog, QApplication
 
 from demoLineEdit import *
 
+
 class MyForm(QDialog):
     def __init__(self):
         super().__init__()
@@ -13,9 +14,10 @@ class MyForm(QDialog):
         self.show()
 
     def dispmessage(self):
-        self.ui.labelResponse.setText("Hello "+self.ui.lineEditName.text())
+        self.ui.labelResponse.setText("Hello " + self.ui.lineEditName.text())
 
-if __name__=="__main__":    
+
+if __name__ == "__main__":
     app = QApplication(sys.argv)
     w = MyForm()
     w.show()

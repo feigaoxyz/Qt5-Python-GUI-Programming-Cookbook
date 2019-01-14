@@ -8,6 +8,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
@@ -44,17 +45,21 @@ class Ui_Dialog(object):
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
         self.comboBoxAccountType.setItemText(0, _translate("Dialog", "Saving Account"))
         self.comboBoxAccountType.setItemText(1, _translate("Dialog", "Current Account"))
-        self.comboBoxAccountType.setItemText(2, _translate("Dialog", "Recurring Deposit Account"))
-        self.comboBoxAccountType.setItemText(3, _translate("Dialog", "Fixed Deposit Account"))
+        self.comboBoxAccountType.setItemText(
+            2, _translate("Dialog", "Recurring Deposit Account")
+        )
+        self.comboBoxAccountType.setItemText(
+            3, _translate("Dialog", "Fixed Deposit Account")
+        )
         self.label.setText(_translate("Dialog", "Select your account type"))
 
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     Dialog = QtWidgets.QDialog()
     ui = Ui_Dialog()
     ui.setupUi(Dialog)
     Dialog.show()
     sys.exit(app.exec_())
-

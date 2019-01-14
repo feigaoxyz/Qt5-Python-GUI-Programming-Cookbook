@@ -8,6 +8,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
@@ -50,7 +51,9 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.radioButtonBusinessClass.setText(_translate("Dialog", "Business Class $125"))
+        self.radioButtonBusinessClass.setText(
+            _translate("Dialog", "Business Class $125")
+        )
         self.radioButtonEconomyClass.setText(_translate("Dialog", "Economy Class $100"))
         self.radioButtonFirstClass.setText(_translate("Dialog", "First Class   $150"))
         self.label.setText(_translate("Dialog", "Choose the flight type"))
@@ -58,10 +61,10 @@ class Ui_Dialog(object):
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     Dialog = QtWidgets.QDialog()
     ui = Ui_Dialog()
     ui.setupUi(Dialog)
     Dialog.show()
     sys.exit(app.exec_())
-

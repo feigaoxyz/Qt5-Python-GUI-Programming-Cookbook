@@ -8,6 +8,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
@@ -18,7 +19,9 @@ class Ui_Dialog(object):
         font.setPointSize(12)
         self.horizontalScrollBarSugarLevel.setFont(font)
         self.horizontalScrollBarSugarLevel.setOrientation(QtCore.Qt.Horizontal)
-        self.horizontalScrollBarSugarLevel.setObjectName("horizontalScrollBarSugarLevel")
+        self.horizontalScrollBarSugarLevel.setObjectName(
+            "horizontalScrollBarSugarLevel"
+        )
         self.label = QtWidgets.QLabel(Dialog)
         self.label.setGeometry(QtCore.QRect(40, 30, 111, 21))
         font = QtGui.QFont()
@@ -50,7 +53,9 @@ class Ui_Dialog(object):
         font.setPointSize(12)
         self.horizontalSliderBloodPressure.setFont(font)
         self.horizontalSliderBloodPressure.setOrientation(QtCore.Qt.Horizontal)
-        self.horizontalSliderBloodPressure.setObjectName("horizontalSliderBloodPressure")
+        self.horizontalSliderBloodPressure.setObjectName(
+            "horizontalSliderBloodPressure"
+        )
         self.label_4 = QtWidgets.QLabel(Dialog)
         self.label_4.setGeometry(QtCore.QRect(240, 110, 131, 16))
         font = QtGui.QFont()
@@ -63,7 +68,9 @@ class Ui_Dialog(object):
         font.setPointSize(12)
         self.verticalSliderCholestrolLevel.setFont(font)
         self.verticalSliderCholestrolLevel.setOrientation(QtCore.Qt.Vertical)
-        self.verticalSliderCholestrolLevel.setObjectName("verticalSliderCholestrolLevel")
+        self.verticalSliderCholestrolLevel.setObjectName(
+            "verticalSliderCholestrolLevel"
+        )
         self.lineEditResult = QtWidgets.QLineEdit(Dialog)
         self.lineEditResult.setGeometry(QtCore.QRect(60, 340, 391, 31))
         font = QtGui.QFont()
@@ -85,10 +92,10 @@ class Ui_Dialog(object):
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     Dialog = QtWidgets.QDialog()
     ui = Ui_Dialog()
     ui.setupUi(Dialog)
     Dialog.show()
     sys.exit(app.exec_())
-

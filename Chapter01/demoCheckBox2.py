@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'demoCheckbox2.ui'
+# Form implementation generated from reading ui file 'demoCheckBox2.ui'
 #
-# Created by: PyQt5 UI code generator 5.6
+# Created by: PyQt5 UI code generator 5.11.3
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
@@ -113,6 +114,7 @@ class Ui_Dialog(object):
         self.labelAmount.raise_()
 
         self.retranslateUi(Dialog)
+        self.checkBoxSoda.clicked["bool"].connect(self.checkBoxTea.toggle)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
@@ -122,12 +124,15 @@ class Ui_Dialog(object):
         self.label_2.setText(_translate("Dialog", "Select your IceCream"))
         self.labelDrinks.setText(_translate("Dialog", "Select your drink"))
         self.groupBoxIceCreams.setTitle(_translate("Dialog", "IceCreams"))
-        self.checkBoxChoclateChips.setText(_translate("Dialog", "Mint Choclate Chips $4"))
+        self.checkBoxChoclateChips.setText(
+            _translate("Dialog", "Mint Choclate Chips $4")
+        )
         self.checkBoxCookieDough.setText(_translate("Dialog", "Cookie Dough $2"))
-        self.checkBoxChoclateAlmond.setText(_translate("Dialog", "Chocolate Almond   $3"))
+        self.checkBoxChoclateAlmond.setText(
+            _translate("Dialog", "Chocolate Almond   $3")
+        )
         self.checkBoxRockyRoad.setText(_translate("Dialog", "Rocky Road $5"))
         self.groupBoxDrinks.setTitle(_translate("Dialog", "Drinks"))
         self.checkBoxCoffee.setText(_translate("Dialog", "Coffee $2"))
         self.checkBoxSoda.setText(_translate("Dialog", "Soda $3"))
         self.checkBoxTea.setText(_translate("Dialog", "Tea $1"))
-

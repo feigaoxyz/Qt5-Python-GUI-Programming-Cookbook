@@ -8,6 +8,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
@@ -62,4 +63,3 @@ class Ui_Dialog(object):
         item.setText(_translate("Dialog", "Thyroid Stimulating Harmone test   $10"))
         self.listWidgetDiagnosis.setSortingEnabled(__sortingEnabled)
         self.label.setText(_translate("Dialog", "Choose the Diagnosis Tests"))
-

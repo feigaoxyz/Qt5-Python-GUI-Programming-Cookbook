@@ -8,6 +8,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
@@ -101,4 +102,3 @@ class Ui_Dialog(object):
         self.radioButtonDebitCard.setText(_translate("Dialog", "Debit/Credit Card"))
         self.radioButtonNetBanking.setText(_translate("Dialog", "NetBanking"))
         self.radioButtonCashOnDelivery.setText(_translate("Dialog", "Cash On Delivery"))
-

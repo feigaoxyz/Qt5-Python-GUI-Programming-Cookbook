@@ -8,6 +8,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
@@ -103,27 +104,33 @@ class Ui_Dialog(object):
         self.checkBox_3.setText(_translate("Dialog", "Camera $250"))
         self.checkBox_4.setText(_translate("Dialog", "Shoes $200"))
         self.pushButton.setText(_translate("Dialog", "Add to Cart"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("Dialog", "Products Listing"))
+        self.tabWidget.setTabText(
+            self.tabWidget.indexOf(self.tab), _translate("Dialog", "Products Listing")
+        )
         self.radioButton.setText(_translate("Dialog", "Debit Card"))
         self.radioButton_2.setText(_translate("Dialog", "Credit Card"))
         self.radioButton_3.setText(_translate("Dialog", "Net Banking"))
         self.radioButton_4.setText(_translate("Dialog", "Cash On Delivery"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("Dialog", "Payment Method"))
+        self.tabWidget.setTabText(
+            self.tabWidget.indexOf(self.tab_2), _translate("Dialog", "Payment Method")
+        )
         self.label.setText(_translate("Dialog", "Address 1"))
         self.label_2.setText(_translate("Dialog", "Address 2"))
         self.label_3.setText(_translate("Dialog", "State"))
         self.label_4.setText(_translate("Dialog", "Country"))
         self.label_5.setText(_translate("Dialog", "Zip Code"))
         self.label_6.setText(_translate("Dialog", "Contact Number"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("Dialog", "Delivery Address"))
+        self.tabWidget.setTabText(
+            self.tabWidget.indexOf(self.tab_3), _translate("Dialog", "Delivery Address")
+        )
 
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     Dialog = QtWidgets.QDialog()
     ui = Ui_Dialog()
     ui.setupUi(Dialog)
     Dialog.show()
     sys.exit(app.exec_())
-

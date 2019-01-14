@@ -4,6 +4,7 @@ from PyQt5.QtWidgets import QDialog, QApplication
 
 from demoListWidget1 import *
 
+
 class MyForm(QDialog):
     def __init__(self):
         super().__init__()
@@ -13,9 +14,12 @@ class MyForm(QDialog):
         self.show()
 
     def dispSelectedTest(self):
-        self.ui.labelTest.setText("You have selected "+self.ui.listWidgetDiagnosis.currentItem().text())
-         
-if __name__=="__main__":    
+        self.ui.labelTest.setText(
+            "You have selected " + self.ui.listWidgetDiagnosis.currentItem().text()
+        )
+
+
+if __name__ == "__main__":
     app = QApplication(sys.argv)
     w = MyForm()
     w.show()

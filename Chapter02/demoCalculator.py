@@ -8,6 +8,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
@@ -80,4 +81,3 @@ class Ui_Dialog(object):
         self.pushButtonSubtract.setText(_translate("Dialog", "-"))
         self.pushButtonMultiply.setText(_translate("Dialog", "X"))
         self.pushButtonDivide.setText(_translate("Dialog", "/"))
-
