@@ -1,7 +1,7 @@
 import sys
 
 from PyQt5.QtWidgets import QDialog, QApplication, QTableWidgetItem
-from DemoTableWidget import *
+from demoTableWidget import *
 
 
 class MyForm(QDialog):
@@ -10,6 +10,7 @@ class MyForm(QDialog):
         self.ui = Ui_Dialog()
         self.ui.setupUi(self)
         self.data = data
+        self.ui.tableWidget.setRowCount(len(self.data))
         self.addcontent()
 
     def addcontent(self):
@@ -28,6 +29,7 @@ data.append(("Suite", "40$"))
 data.append(("Super Luxury", "30$"))
 data.append(("Super Deluxe", "20$"))
 data.append(("Ordinary", "10$"))
+data.append(("Cheap", "5$"))
 
 
 if __name__ == "__main__":
