@@ -1,6 +1,7 @@
 import sys
 
-from PyQt5.QtWidgets import QDialog, QApplication, QFontDialog
+# from PyQt5.QtWidgets import QDialog, QApplication, QFontDialog
+from PySide2.QtWidgets import QDialog, QApplication, QFontDialog
 
 
 from demoFontDialog import *
@@ -15,9 +16,13 @@ class MyForm(QDialog):
         self.show()
 
     def changefont(self):
-        font, ok = QFontDialog.getFont()
+        font = self.ui.textEdit.font()
+        print(font.toString(), font.family(), font.style())
+        ok, font = QFontDialog.getFont()
         if ok:
+            print(font.toString())
             self.ui.textEdit.setFont(font)
+            self.ui.pushButtonFont.setFont(font)
 
 
 if __name__ == "__main__":
