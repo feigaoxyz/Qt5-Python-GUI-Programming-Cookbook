@@ -18,6 +18,7 @@ class MyForm(QMainWindow):
 
         fname = QFileDialog.getOpenFileName(self, "Open file", "/home")
 
+        print(fname)
         if fname[0]:
             f = open(fname[0], "r")
 
@@ -28,13 +29,14 @@ class MyForm(QMainWindow):
     def saveFileDialog(self):
         options = QFileDialog.Options()
         options |= QFileDialog.DontUseNativeDialog
-        fileName, _ = QFileDialog.getSaveFileName(
+        fileName, other = QFileDialog.getSaveFileName(
             self,
             "QFileDialog.getSaveFileName()",
             "",
             "All Files (*);;Text Files (*.txt)",
             options=options,
         )
+        print("Return", fileName, other)
         f = open(fileName, "w")
         text = self.ui.textEdit.toPlainText()
         f.write(text)
