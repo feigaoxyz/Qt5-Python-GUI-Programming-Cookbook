@@ -8,6 +8,7 @@ verify_ssl = true
 [packages]
 pyside2 = "*"
 pyqt5 = "*"
+quamash = "*"
 
 [requires]
 python_version = "3.6"
