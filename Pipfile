@@ -9,6 +9,7 @@ verify_ssl = true
 pyside2 = "*"
 pyqt5 = "*"
 quamash = "*"
+matplotlib = "*"
 
 [requires]
 python_version = "3.6"
